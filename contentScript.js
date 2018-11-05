@@ -2,7 +2,7 @@
 setTimeout(function(){
   
   const headers = []
-  const headersHtml = document.getElementsByClassName("ghx-column ghx-narrow-card ghx-xtra-narrow-card")
+  const headersHtml = document.getElementsByClassName("ghx-column")
   for (var i = 0; i < headersHtml.length; i++) {
     const header = headersHtml[i].getElementsByClassName("ghx-column-header-flex-1")
     if (header.length != 0) {
@@ -11,7 +11,7 @@ setTimeout(function(){
   }
     
   
-  const lists = document.getElementsByClassName("ghx-column ui-sortable ghx-narrow-card ghx-xtra-narrow-card")
+  const lists = document.getElementsByClassName("ghx-column ui-sortable")
   let totalPoints = 0;
   let unSizedTickets = 0;
   for (var i = 0; i < lists.length; i++) {
