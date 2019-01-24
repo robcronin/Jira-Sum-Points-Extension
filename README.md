@@ -4,9 +4,10 @@
 - Go to chrome://extensions/
 - Toggle on developer mode
 - Choose `Load unpacked` and choose this directory
-- Now when you reload a Jira board the column sums will show in the console
-  - Note: the current version does a 10s timeout before displaying in the console
+- Now you should see a new extension in your toolbar
+  - Click this while on a jira board to see the sums in the column titles
+  - Note: this won't adapt to moving tickets, you will need to click each time you want to recalculate
 
 ## To Do
 
-- Edit the page to show the points totals in the headers
+- Have this script run at all times to have up to date sums
