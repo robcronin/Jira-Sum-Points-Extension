@@ -3,12 +3,11 @@
   "version": "1.0",
   "description": "Count your points in Jira",
   "permissions": ["declarativeContent", "activeTab"],
-  "content_scripts": [
-    {
-      "matches": ["https://*.atlassian.net/*"],
-      "js": ["contentScript.js"],
-      "run_at": "document_end"
-    }
-  ],
-  "manifest_version": 2
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "logo.png"
+  }
 }

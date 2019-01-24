@@ -1,4 +1,4 @@
-setTimeout(function() {
+function sumPoints() {
   const headers = [];
   const headersHtml = document.getElementsByClassName('ghx-column');
 
@@ -63,7 +63,16 @@ setTimeout(function() {
           header[0].childNodes[0] &&
           header[0].childNodes[0].innerText
         ) {
-          header[0].childNodes[0].innerText += ' ' + pointsSum;
+          const pointsNode = document.createElement('h2');
+          pointsNode.innerText = pointsSum;
+          pointsNode.style.color = '#25c';
+          pointsNode.style.fontWeight = 'bold';
+          pointsNode.style.marginLeft = '10px';
+          if (header[0].childNodes.length > 1) {
+            header[0].replaceChild(pointsNode, header[0].childNodes[1]);
+          } else {
+            header[0].appendChild(pointsNode);
+          }
         }
       }
     }
@@ -71,4 +80,6 @@ setTimeout(function() {
     console.log('');
     console.log('UNSIZED', unSizedTickets);
   }
-}, 8000);
+}
+
+sumPoints();
