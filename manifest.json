@@ -1,14 +1,14 @@
 {
-    "name": "Sum Points Jira",
-    "version": "1.0",
-    "description": "Count your points in Jira",
-    "permissions": ["declarativeContent", "activeTab"],
-    "content_scripts": [
-        {
-          "matches": ["https://*.atlassian.net/*"],
-          "js": ["contentScript.js"],
-          "run_at": "document_end"
-        }
-    ],
-    "manifest_version": 2
+  "name": "Sum Points Jira",
+  "version": "1.0",
+  "description": "Count your points in Jira",
+  "permissions": ["declarativeContent", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.atlassian.net/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2
 }
