@@ -3,6 +3,7 @@ setTimeout(function() {
   const headersHtml = document.getElementsByClassName('ghx-column');
 
   if (headersHtml && headersHtml.length > 0) {
+    console.log(headersHtml.length);
     for (var i = 0; i < headersHtml.length; i++) {
       const header = headersHtml[i].getElementsByClassName(
         'ghx-column-header-flex-1',
@@ -52,6 +53,18 @@ setTimeout(function() {
         }
         console.log(headers[i], pointsSum.toFixed(2));
         totalPoints += pointsSum;
+        const header = headersHtml[i].getElementsByClassName(
+          'ghx-column-header-flex-1',
+        );
+        if (
+          header &&
+          header[0] &&
+          header[0].childNodes &&
+          header[0].childNodes[0] &&
+          header[0].childNodes[0].innerText
+        ) {
+          header[0].childNodes[0].innerText += ' ' + pointsSum;
+        }
       }
     }
     console.log('TOTAL', totalPoints.toFixed(2));
